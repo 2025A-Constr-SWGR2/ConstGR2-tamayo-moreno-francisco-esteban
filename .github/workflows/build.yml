@@ -10,12 +10,13 @@ jobs:
       - name: Usar nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: "22.x"
-      - name: Entrar carpeta calculadora
-        run: cd .\calculadora\
-      - name: Dir
-        run: dir
+          node-version: '22.x'
       - name: Instalar dependencias
-        run: npm install
+        run: |
+          cd calculadora
+          npm install
       - name: Compilar
-        run: npm run build
+        run: |
+          cd calculadora
+          npm run build
+ 
